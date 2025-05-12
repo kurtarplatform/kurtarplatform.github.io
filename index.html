@@ -8,14 +8,16 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
-    header { background: #143642; color: #fff; padding: 2rem; text-align: center; }
+    header { background: #143642; color: #fff; padding: 2rem; text-align: center; position: relative; }
     header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header img.logo { position: absolute; left: 1rem; top: 1rem; height: 60px; }
     nav { background: #0f2e3d; padding: 1rem; text-align: center; }
     nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
     .container { padding: 2rem; max-width: 1000px; margin: auto; }
     .section { margin-bottom: 3rem; }
     .section h2 { color: #143642; margin-bottom: 1rem; }
-    .projects img { width: 100%; border-radius: 10px; margin: 1rem 0; }
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .projects img { width: 100%; border-radius: 10px; }
     footer { background: #143642; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem; }
     .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
     .card { background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -25,6 +27,7 @@
 </head>
 <body>
   <header>
+    <img src="assets/logo.png" alt="Logo" class="logo">
     <h1>KURTAR: IoT ve Yapay Zeka Temelli Afet Müdahale Platformu</h1>
     <p>Deprem, sel, çığ gibi afetlerde hayat kurtaran teknoloji</p>
   </header>
@@ -41,19 +44,33 @@
       <div class="card-grid">
         <div class="card">
           <h3>Yapay Zeka</h3>
+          <img src="assets/deepleraning.png" alt="AI Icon">
           <p>Zaman serisi analizleri, LSTM, CNN, SVM algoritmaları ile afet tespiti ve rota önerileri.</p>
         </div>
         <div class="card">
           <h3>IoT & Sensör Ağı</h3>
+          <img src="assets/veri toplama.png" alt="Sensor Icon">
           <p>IMU, jiroskop, termal sensörler ile düşük enerji tüketimli anlık veri toplanması.</p>
         </div>
         <div class="card">
           <h3>Mobil Platform</h3>
+          <img src="assets/edge.png" alt="Mobile Icon">
           <p>Android/iOS tabanlı uygulamalarla gerçek zamanlı konum bildirimi.</p>
         </div>
         <div class="card">
-          <h3>Sunucu & Haritalama</h3>
-          <p>Sunucuda veri analizi, interaktif haritalar, afet yoğunluk görselleştirmeleri.</p>
+          <h3>Haritalama & Koordinasyon</h3>
+          <img src="assets/karardestek .png" alt="Map Icon">
+          <p>Sunucuda analiz, harita ile yıkım ve kurtarma görselleştirme.</p>
+        </div>
+        <div class="card">
+          <h3>Sürdürülebilir Mekanizma</h3>
+          <img src="assets/sürdürülebilrmekanizma.png" alt="Mechanism Icon">
+          <p>Yapay zekâ destekli sürekli güncellenebilir modüler yapılar.</p>
+        </div>
+        <div class="card">
+          <h3>Yaşam Alanı Analizi</h3>
+          <img src="assets/yaşamsalanaliz.png" alt="Habitat Icon">
+          <p>Deprem sonrası yaşam alanı koşullarının değerlendirilmesi.</p>
         </div>
       </div>
     </section>
@@ -61,9 +78,14 @@
     <section class="section" id="ekip">
       <h2>Proje Ekibi</h2>
       <ul>
-        <li>Dr. Öğr. Üyesi Yılmaz Atay - Gazi Üniversitesi</li>
-        <li>Prof. Dr. Tamer Kahveci - University of Florida</li>
-        <li>Enes Hoca</li>
+        <li>Prof. Dr. Tamer Kahveci</li>
+        <li>Dr. Öğr. Üyesi Yılmaz Atay</li>
+        <li>Muhammed ŞARA</li>
+        <li>Ahmet Kağan AKINCI</li>
+        <li>Mahsa REZAEI</li>
+        <li>Anas AL-MAQTARİ</li>
+        <li>Eylül Reyhan KURT</li>
+        <li>Mehmet Akif ERSOY</li>
       </ul>
     </section>
 
@@ -73,6 +95,7 @@
         <img src="assets/deprem-simulasyon.png" alt="Deprem Simülasyon Cihazı">
         <img src="assets/kurtar-arayuz.png" alt="Kurtar Platform Arayüz">
         <img src="assets/sensor-test.png" alt="Sensör Test Görseli">
+        <img src="assets/edge.png" alt="Mobil Yapay Zeka">
       </div>
     </section>
 
@@ -84,7 +107,7 @@
 
   </div>
   <footer>
-    <p>&copy; 2025 KURTAR Projesi - Gazi Üniversitesi & Florida Üniversitesi</p>
+    <p>&copy; 2025 KURTAR Projesi - Gazi Üniversitesi</p>
   </footer>
 </body>
 </html>
