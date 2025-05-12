@@ -30,11 +30,7 @@
     .team-grid .member { background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: all 0.3s ease; }
     .team-grid .member:hover { background: #e9f2f5; transform: scale(1.03); }
     .team-grid .member h4 { margin: 0.5rem 0; color: #143642; font-size: 1.1rem; }
-    .how-section { display: flex; flex-direction: column; gap: 2rem; padding: 2rem 0; }
-    .how-block { display: flex; align-items: center; gap: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .how-block img { width: 80px; height: 80px; object-fit: contain; }
-    .how-block div { flex: 1; }
-    .how-block h3 { margin: 0 0 0.5rem; color: #143642; }
+    .linkedin-icon { width: 24px; height: 24px; margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -51,104 +47,43 @@
     <a href="#basvuru">Proje Bilgisi</a>
   </nav>
   <div class="container">
-
-    <section class="section" id="moduller">
-      <h2>Proje Modülleri</h2>
-      <p>KURTAR projesi, afet anında mobil cihazlar ve IoT teknolojileri üzerinden gerçek zamanlı veri toplayarak, otonom karar verme yeteneklerine sahip yapay zeka sistemleri ile kurtarma süreçlerini optimize etmeyi hedeflemektedir. Sensörlerden gelen veriler, makine öğrenmesi ve derin öğrenme destekli analizlerle anlamlandırılarak, merkezi sunuculara aktarılır ve harita tabanlı arayüzlerle koordinasyon sağlanır.</p>
-      <div class="card-grid">
-        <div class="card">
-          <img src="assets/deepleraning.png" alt="AI Icon">
-          <h3>Yapay Zeka</h3>
-          <p>Zaman serisi analizleri, afet davranış modellemesi ve destek sistemleri için veri odaklı karar mekanizmaları.</p>
-        </div>
-        <div class="card">
-          <img src="assets/veritoplama.png" alt="Sensor Icon">
-          <h3>IoT & Sensör Ağı</h3>
-          <p>IMU, jiroskop, GPS ve çevresel sensörlerle veri toplanması ve merkezi sunucuya iletim.</p>
-        </div>
-        <div class="card">
-          <img src="assets/edge.png" alt="Mobile Icon">
-          <h3>Mobil Platform</h3>
-          <p>Android/iOS tabanlı uygulamalarla gerçek zamanlı konum bildirimi ve enerji optimizasyonu.</p>
-        </div>
-        <div class="card">
-          <img src="assets/karardestek.png" alt="Map Icon">
-          <h3>Haritalama & Koordinasyon</h3>
-          <p>Sunucuda analiz, harita ile yıkım ve kurtarma görselleştirme.</p>
-        </div>
-        <div class="card">
-          <img src="assets/sürdürülebilrmekanizma.png" alt="Mechanism Icon">
-          <h3>Sürdürülebilir Mekanizma</h3>
-          <p>Güncellenebilir, modüler, düşük güç tüketimli yapılarla uzun süreli çalışabilirlik.</p>
-        </div>
-        <div class="card">
-          <img src="assets/yaşamsalanaliz.png" alt="Habitat Icon">
-          <h3>Yaşam Alanı Analizi</h3>
-          <p>Deprem sonrası ortam koşullarının değerlendirilmesi ve müdahale önceliklendirmesi.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how">
-      <h2>Nasıl Çalışır?</h2>
-      <div class="how-section">
-        <div class="how-block">
-          <img src="assets/collect.png" alt="Veri Toplama">
-          <div>
-            <h3>Veri Toplama</h3>
-            <p>Mobil cihazlar ve bağlı sensörler, sarsıntı ve çevresel verileri gerçek zamanlı olarak toplar.</p>
-          </div>
-        </div>
-        <div class="how-block">
-          <img src="assets/detect.png" alt="Algılama">
-          <div>
-            <h3>Algılama</h3>
-            <p>Veriler, cihaz üzerinde çalışan yapay zeka modelleriyle analiz edilerek sarsıntı ve afet bilgisi çıkarılır.</p>
-          </div>
-        </div>
-        <div class="how-block">
-          <img src="assets/respond.png" alt="Yanıt Verme">
-          <div>
-            <h3>Yanıt Verme</h3>
-            <p>Sunucular, toplu analizlerle durumu haritalar ve kurtarma ekiplerine rota, risk ve konum önerileri sunar.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="ekip">
       <h2>Proje Ekibi</h2>
       <div class="team-grid">
-        <div class="member"><h4>Prof. Dr. Tamer Kahveci</h4></div>
-        <div class="member"><h4>Dr. Öğr. Üyesi Yılmaz Atay</h4></div>
-        <div class="member"><h4>Muhammed ŞARA</h4></div>
-        <div class="member"><h4>Ahmet Kağan AKINCI</h4></div>
-        <div class="member"><h4>Mahsa REZAEI</h4></div>
-        <div class="member"><h4>Anas AL-MAQTARİ</h4></div>
-        <div class="member"><h4>Eylül Reyhan KURT</h4></div>
-        <div class="member"><h4>Mehmet Akif ERSOY</h4></div>
+        <div class="member">
+          <h4><a href="https://www.linkedin.com/in/tamer-kahveci-3a210111" target="_blank">Prof. Dr. Tamer Kahveci</a></h4>
+          <a href="https://www.linkedin.com/in/tamer-kahveci-3a210111" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/y%C4%B1lmaz-atay-631087195" target="_blank">Dr. Öğr. Üyesi Yılmaz Atay</a></h4>
+          <a href="https://tr.linkedin.com/in/y%C4%B1lmaz-atay-631087195" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/muhammedsara" target="_blank">Muhammed ŞARA</a></h4>
+          <a href="https://tr.linkedin.com/in/muhammedsara" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/ahmet-ka%C4%9Fan-ak%C4%B1nc%C4%B1-78b146143" target="_blank">Ahmet Kağan AKINCI</a></h4>
+          <a href="https://tr.linkedin.com/in/ahmet-ka%C4%9Fan-ak%C4%B1nc%C4%B1-78b146143" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/mahsa-rezaei-a21506bb" target="_blank">Mahsa REZAEI</a></h4>
+          <a href="https://tr.linkedin.com/in/mahsa-rezaei-a21506bb" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/anas-a-12815124b" target="_blank">Anas AL-MAQTARİ</a></h4>
+          <a href="https://tr.linkedin.com/in/anas-a-12815124b" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/eyl%C3%BCl-reyyan-kurt-04532b21a" target="_blank">Eylül Reyhan KURT</a></h4>
+          <a href="https://tr.linkedin.com/in/eyl%C3%BCl-reyyan-kurt-04532b21a" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
+        <div class="member">
+          <h4><a href="https://tr.linkedin.com/in/mehmet-akif-ersoy-56b923308" target="_blank">Mehmet Akif ERSOY</a></h4>
+          <a href="https://tr.linkedin.com/in/mehmet-akif-ersoy-56b923308" target="_blank"><img class="linkedin-icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+        </div>
       </div>
     </section>
-
-    <section class="section" id="projeler">
-      <h2>Çalışmalardan Görseller</h2>
-      <div class="projects">
-        <img src="assets/deprem-simulasyon.png" alt="Deprem Simülasyon Cihazı">
-        <img src="assets/kurtar-arayuz.png" alt="Kurtar Platform Arayüz">
-        <img src="assets/sensor-test.png" alt="Sensör Test Görseli">
-        <img src="assets/cloudai.png" alt="Mobil Yapay Zeka">
-      </div>
-    </section>
-
-    <section class="section" id="basvuru">
-      <h2>Proje Bilgisi</h2>
-      <p>KURTAR projesi, TÜBİTAK 1001 kapsamında desteklenmektedir. Proje detayları için aşağıdaki bağlantıya tıklayabilirsiniz.</p>
-      <a class="btn" href="https://gazi.edu.tr/view/news/298726/tubitak-1001-bilimsel-ve-teknolojik-arastirma-projelerini-destekleme-programi-kapsaminda-3-proje-d" target="_blank">Gazi Üniversitesi Haber Duyurusu</a>
-    </section>
-
   </div>
-  <footer>
-    <p>&copy; 2025 KURTAR Projesi - Gazi Üniversitesi</p>
-  </footer>
 </body>
 </html>
