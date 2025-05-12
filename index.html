@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Kurtar Platform</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KURTAR Projesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
+    header { background: #143642; color: #fff; padding: 2rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    nav { background: #0f2e3d; padding: 1rem; text-align: center; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    .container { padding: 2rem; max-width: 1000px; margin: auto; }
+    .section { margin-bottom: 3rem; }
+    .section h2 { color: #143642; margin-bottom: 1rem; }
+    .projects img { width: 100%; border-radius: 10px; margin: 1rem 0; }
+    footer { background: #143642; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .card { background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 0.5rem; color: #0f2e3d; }
+    .btn { display: inline-block; padding: 0.5rem 1rem; background: #e63946; color: white; border-radius: 5px; text-decoration: none; margin-top: 1rem; }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Kurtar Platform</h1>
-    <p>Projelerim, bağlantılarım ve daha fazlası burada!</p>
+    <h1>KURTAR: IoT ve Yapay Zeka Temelli Afet Müdahale Platformu</h1>
+    <p>Deprem, sel, çığ gibi afetlerde hayat kurtaran teknoloji</p>
   </header>
-  <main>
-    <section>
-      <h2>Projeler</h2>
+  <nav>
+    <a href="#moduller">Modüller</a>
+    <a href="#ekip">Ekip</a>
+    <a href="#projeler">Görseller</a>
+    <a href="#basvuru">Bursiyer Başvurusu</a>
+  </nav>
+  <div class="container">
+
+    <section class="section" id="moduller">
+      <h2>Proje Modülleri</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Yapay Zeka</h3>
+          <p>Zaman serisi analizleri, LSTM, CNN, SVM algoritmaları ile afet tespiti ve rota önerileri.</p>
+        </div>
+        <div class="card">
+          <h3>IoT & Sensör Ağı</h3>
+          <p>IMU, jiroskop, termal sensörler ile düşük enerji tüketimli anlık veri toplanması.</p>
+        </div>
+        <div class="card">
+          <h3>Mobil Platform</h3>
+          <p>Android/iOS tabanlı uygulamalarla gerçek zamanlı konum bildirimi.</p>
+        </div>
+        <div class="card">
+          <h3>Sunucu & Haritalama</h3>
+          <p>Sunucuda veri analizi, interaktif haritalar, afet yoğunluk görselleştirmeleri.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ekip">
+      <h2>Proje Ekibi</h2>
       <ul>
-        <li><a href="https://github.com/kurtarplatform/proje-tanitimi" target="_blank">Proje Tanıtımı</a></li>
-        <!-- Yeni projeleri buraya ekleyebilirsin -->
+        <li>Dr. Öğr. Üyesi Yılmaz Atay - Gazi Üniversitesi</li>
+        <li>Prof. Dr. Tamer Kahveci - University of Florida</li>
+        <li>Enes Hoca</li>
       </ul>
     </section>
-  </main>
+
+    <section class="section" id="projeler">
+      <h2>Çalışmalardan Görseller</h2>
+      <div class="projects">
+        <img src="assets/deprem-simulasyon.jpg" alt="Deprem Simülasyon Cihazı">
+        <img src="assets/kurtar-arayuz.jpg" alt="Kurtar Platform Arayüz">
+        <img src="assets/sensor-test.jpg" alt="Sensör Test Görseli">
+      </div>
+    </section>
+
+    <section class="section" id="basvuru">
+      <h2>Bursiyer Başvurusu</h2>
+      <p>Yüksek lisans/doktora öğrencileri için 3 pozisyon açılmıştır. Başvurular <a href="mailto:kurtar1001@gmail.com">kurtar1001@gmail.com</a> adresine yapılabilir.</p>
+      <a class="btn" href="https://x.com/tamer_kahveci6/status/1848143851816419719" target="_blank">Twitter Duyurusu</a>
+    </section>
+
+  </div>
   <footer>
-    <p>© 2025 Kurtar Platform</p>
+    <p>&copy; 2025 KURTAR Projesi - Gazi Üniversitesi & Florida Üniversitesi</p>
   </footer>
 </body>
 </html>
