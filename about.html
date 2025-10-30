@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Videograph Template">
+    <meta name="keywords" content="Videograph, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KURTAR</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+<script src="js/language.js"></script>
+<style>
+    .team {
+        padding: 60px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/team-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+    .team::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(0, 191, 231, 0.08) 0%, transparent 60%),
+            radial-gradient(circle at 80% 70%, rgba(243, 156, 18, 0.08) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+
+    .team-section {
+        margin-bottom: 80px;
+    }
+
+
+
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    .col-lg-4,
+    .col-lg-3 {
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .team__item {
+        position: relative;
+        height: 420px;
+        border-radius: 20px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .team__item:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .team__item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        transition: all 0.4s ease;
+    }
+
+    .team__item:hover::before {
+        background: linear-gradient(to bottom,
+                transparent 0%,
+                transparent 40%,
+                rgba(0, 0, 0, 0.4) 60%,
+                rgba(0, 0, 0, 0.95) 100%);
+    }
+
+    .team__item__text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 25px;
+        z-index: 2;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        pointer-events: none;
+    }
+
+    .team__item:hover .team__item__text {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .team__item__text h4 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        line-height: 1.3;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    .team__item__social {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 15px;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    }
+
+    .team__item:hover .team__item__social {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .team__item__social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .team__item__social a:hover {
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .team__item__social a.linkedin {
+        color: #0077b5;
+    }
+
+    .team__item__social a.linkedin:hover {
+        background: #0077b5;
+        color: white;
+        border-color: #0077b5;
+    }
+
+    .team__item__social a.github {
+        color: #333;
+    }
+
+    .team__item__social a.github:hover {
+        background: #333;
+        color: white;
+        border-color: #333;
+    }
+
+    .team__item__social a.email {
+        color: #ea4335;
+    }
+
+    .team__item__social a.email:hover {
+        background: #ea4335;
+        color: white;
+        border-color: #ea4335;
+    }
+
+    .team__item__social a.globe {
+        color: #f39c12;
+    }
+
+    .team__item__social a.globe:hover {
+        background: #f39c12;
+        color: white;
+        border-color: #f39c12;
+    }
+
+    .team__btn {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+
+
+    .primary-btn:hover::before {
+        left: 0;
+    }
+
+    .primary-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(0, 191, 231, 0.3);
+    }
+
+    .primary-btn span {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+
+        .col-lg-4,
+        .col-lg-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .team__item {
+            height: 360px;
+        }
+
+        .team__item__text h4 {
+            font-size: 16px;
+        }
+
+        .team__item__text p {
+            font-size: 12px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+        }
+
+        .section-title h3 {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .col-lg-4,
+        .col-lg-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .team__item {
+            height: 320px;
+        }
+
+        .team__item__text {
+            padding: 25px 20px;
+        }
+
+        .team__item__text h4 {
+            font-size: 15px;
+        }
+
+        .team__item__text p {
+            font-size: 11px;
+        }
+    }
+
+
+
+
+
+    /* defult Icons for the team section */
+    .team__item.placeholder {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .team__item.placeholder .team__icon {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        padding: 25px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .team__item.placeholder .team__icon i {
+        font-size: 60px;
+        color: #fff;
+    }
+
+    .team__item.placeholder h4 {
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    .team__item.placeholder p {
+        color: #ddd;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo_beyaz5.PNG" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a data-key="home" href="./index.html">Ana Sayfa</a></li>
+                                <li class="active"><a data-key="about" href="./about.html">Hakkımızda</a></li>
+                                <li><a data-key="portfolio" href="./portfolio.html">Portfolio</a></li>
+                                <li><a data-key="services" href="./services.html">SSS</a></li>
+                                <li><a data-key="career" href="./career.html">Kariyer</a></li>
+                                <li><a data-key="contact" href="./contact.html">İletişim</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+                            <a href="https://www.linkedin.com/company/kurtar/"><i class="fa fa-linkedin-in"></i></a>
+                            <a href="#" onclick="changeLang('en')">
+                                <img src="https://flagcdn.com/us.svg" alt="EN" class="flag-lang">
+                            </a>
+                            <a href="#" onclick="changeLang('tr')">
+                                <img src="https://flagcdn.com/tr.svg" alt="TR" class="flag-lang">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="img/hero/hero13.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2 data-key="pagetitle_about">Hakkımızda</h2>
+                        <div class="breadcrumb__links">
+                            <a data-key="pagetitle_main" href="index.html">Ana Sayfa</a>
+                            <span data-key="pagetitle_about">Hakkımızda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- About Section Begin -->
+    <section class="about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about__pic">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="about__pic__item about__pic__item--large set-bg"
+                                    data-setbg="img/hero/hero10.jpg"></div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="about__pic__item set-bg" data-setbg="img/hero/hero11.jpg"></div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="about__pic__item set-bg" data-setbg="img/hero/hero12.jpg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <span data-key="kurtarekibi">Kurtar Ekibi</span>
+                            <h2 data-key="footer2">Biz Kimiz?</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="services__item">
+                                    <div class="services__item__icon">
+                                        <img src="img/icons/deprem5.png" alt="">
+                                    </div>
+                                    <h4 data-key="des3">Deprem Erken Uyarı Sistemi</h4>
+                                    <p data-key="des4">Deprem olduğunuz yere ulaşmadan önce uyarı sağlar.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="services__item">
+                                    <div class="services__item__icon">
+                                        <img src="img/icons/karardestek1.jpg" alt="">
+                                    </div>
+                                    <h4 data-key="des1">Deprem Sonrası Hızlı Müdahale Sistemi</h4>
+                                    <p data-key="des2">Deprem sonrası ekiplerin etkili yönlendirilmesiyle hızlı
+                                        müdahale.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__text__desc">
+                            <p data-key="main_info6">Afet anında mobil cihazlar ve IoT teknolojileri üzerinden gerçek
+                                zamanlı veri toplayarak,
+                                otonom karar verme yeteneklerine sahip yapay zeka sistemleri ile kurtarma süreçlerini
+                                optimize etmeyi hedeflemektedir. Sensörlerden gelen veriler, makine öğrenmesi ve derin
+                                öğrenme destekli analizlerle anlamlandırılarak, merkezi sunuculara aktarılır ve harita
+                                tabanlı arayüzlerle koordinasyon sağlanır..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <!-- <section class="testimonial spad set-bg" data-setbg="img/testimonial-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <span>Loved By Clients</span>
+                        <h2>What clients say?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="testimonial__slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="testimonial__item">
+                            <div class="testimonial__text">
+                                <p>Delivers such a great service that it can benefit all kinds of people from any number
+                                    of industries.</p>
+                            </div>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-1.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Krista Attorn</h5>
+                                    <span>Web Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial__item">
+                            <div class="testimonial__text">
+                                <p>Videographer delivers such a great service that it can benefit all kinds of people
+                                    from any number.</p>
+                            </div>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Krista Attorn</h5>
+                                    <span>Web Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial__item">
+                            <div class="testimonial__text">
+                                <p>Videographer delivers such a great service that it can benefit all kinds of people
+                                    from any number.</p>
+                            </div>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-3.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Krista Attorn</h5>
+                                    <span>Web Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial__item">
+                            <div class="testimonial__text">
+                                <p>Delivers such a great service that it can benefit all kinds of people from any number
+                                    of industries.</p>
+                            </div>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-1.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Krista Attorn</h5>
+                                    <span>Web Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial__item">
+                            <div class="testimonial__text">
+                                <p>Videographer delivers such a great service that it can benefit all kinds of people
+                                    from any number.</p>
+                            </div>
+                            <div class="testimonial__author">
+                                <div class="testimonial__author__pic">
+                                    <img src="img/testimonial/ta-2.jpg" alt="">
+                                </div>
+                                <div class="testimonial__author__text">
+                                    <h5>Krista Attorn</h5>
+                                    <span>Web Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Testimonial Section End -->
+
+    <!-- Counter Section Begin -->
+    <!-- <section class="counter">
+        <div class="container">
+            <div class="counter__content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-1.png" alt="">
+                                <h2 class="counter_num">230</h2>
+                                <p>Compled Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item second__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-2.png" alt="">
+                                <h2 class="counter_num">1068</h2>
+                                <p>Happy clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item third__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-3.png" alt="">
+                                <h2 class="counter_num">230</h2>
+                                <p>Perspective clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item four__item">
+                            <div class="counter__item__text">
+                                <img src="img/icons/ci-4.png" alt="">
+                                <h2 class="counter_num">230</h2>
+                                <p>Compled Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Counter Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 data-key="projectteam">Proje EKİBİ</h2>
+                    </div>
+                </div>
+            </div> <!-- Ana Ekip -->
+            <div class="team-section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title center-title ">
+                            <h3 data-key="mainteam">Ana Ekip</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> <!-- Yurt Dışı Danışman -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/tamer.jpg');">
+                            <div class="team__item__text">
+                                <h4 data-key="tamer">Prof. Dr. Tamer KAHVECİ</h4>
+                                <p>
+                                    <span data-key="about1">Yurt Dışı Danışman</span><br>
+                                    University of Florida
+                                </p>
+                                <div class="team__item__social"> <a
+                                        href="https://www.linkedin.com/in/tamer-kahveci-3a210111/" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Proje Yürütücüsü -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/yilmaz.jpg');">
+                            <div class="team__item__text">
+                                <h4 data-key="yılmaz">Dr. Öğr. Üyesi Yılmaz ATAY</h4>
+                                <p>
+                                    <span data-key="about2">Proje Yürütücüsü</span><br>
+                                    <span data-key="gazi">Gazi Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a
+                                        href="https://www.linkedin.com/in/y%C4%B1lmaz-atay-631087195/"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                            </div>
+                        </div>
+                    </div> <!-- Yurt İçi Araştırmacı -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/bilgehan.jpg');">
+                            <div class="team__item__text">
+                                <h4>Öğr. Gör. Dr. Bilgehan ARSLAN</h4>
+                                <p>
+                                    <span data-key="about3">Yurt İçi Araştırmacı</span><br>
+                                    <span data-key="gazi">Gazi Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a href="#" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Bursiyerler -->
+            <div class="team-section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title center-title ">
+                            <h3 data-key="interns">Bursiyerler</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> <!-- Muhammed ŞARA -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/muhammed.jpg');">
+                            <div class="team__item__text">
+                                <h4>Muhammed ŞARA</h4>
+                                <p>
+                                    <span data-key="about9">Sistem Mimarisi & Teknik Koordinatör</span><br>
+                                    <span data-key="kocaeli">Kocaeli Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a href="https://www.linkedin.com/in/muhammedsara/"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                            </div>
+                        </div>
+                    </div> <!-- Mahsa REZAEI -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/mahsa.jpg');">
+                            <div class="team__item__text">
+                                <h4>Mahsa REZAEI</h4>
+                                <p>
+                                    <span data-key="about4">Yapay Zekâ & Veri Analitiği</span><br>
+                                    <span data-key="gazi">Gazi Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a
+                                        href="https://www.linkedin.com/in/mahsa-rezaei-a21506bb/" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Anas AL-MAQTARİ -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/anas.jpg');">
+                            <div class="team__item__text">
+                                <h4>Anas AL-MAQTARİ</h4>
+                                <p>
+                                    <span data-key="about5">Mobil/İstemci Geliştirme</span><br>
+                                    <span data-key="kocaeli">Kocaeli Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a href="https://www.linkedin.com/in/anas-a-12815124b/"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                            </div>
+                        </div>
+                    </div> <!-- Eylül Reyyan KURT -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/eylul.jpg');">
+                            <div class="team__item__text">
+                                <h4>Eylül Reyyan KURT</h4>
+                                <p>
+                                    <span data-key="about6">Arayüz & İçerik</span><br>
+                                    <span data-key="gazi">Gazi Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a
+                                        href="https://www.linkedin.com/in/eyl%C3%BCl-reyyan-kurt-04532b21a/"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Ahmet Kağan AKINCI -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/ahmet.jpg');">
+                            <div class="team__item__text">
+                                <h4>Ahmet Kağan AKINCI</h4>
+                                <p>
+                                    <span data-key="about7">Edge AI & Sensör Entegrasyonu</span><br>
+                                    <span data-key="gazi">Gazi Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a
+                                        href="https://www.linkedin.com/in/ahmet-ka%C4%9Fan-ak%C4%B1nc%C4%B1-78b146143/"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                            </div>
+                        </div>
+                    </div> <!-- Mehmet Akif ERSOY -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/mehmet.jpg');">
+                            <div class="team__item__text">
+                                <h4>Mehmet Akif ERSOY</h4>
+                                <p>
+                                    <span data-key="about8">IoT & Haberleşme</span><br>
+                                    <span data-key="gazi">Gazi Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social"> <a
+                                        href="https://tr.linkedin.com/in/mehmet-akif-ersoy-56b923308"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Danışmanlar / Akademik Danışma Kurulu -->
+            <div class="team-section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title center-title ">
+                            <h3 data-key="advisors">Danışmanlar / Akademik Danışma Kurulu</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"> <!-- Doç.Dr. Süleyman EKEN -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/suleyman.jpg');">
+                            <div class="team__item__text">
+                                <h4>Doç.Dr. Süleyman EKEN</h4>
+                                <p>
+                                    <span data-key="about10">Yurt İçi Akademik Danışman</span><br>
+                                    <span data-key="kocaeli">Kocaeli Üniversitesi</span>
+                                </p>
+
+                                <div class="team__item__social"> <a
+                                        href="https://www.linkedin.com/in/s%C3%BCleyman-eken-b29ab8170/"
+                                        class="linkedin"><i class="fab fa-linkedin-in"></i></a> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Abdullah ÖZÇELİK -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/abdullah.jpg');">
+                            <div class="team__item__text">
+                                <h4>Abdullah ÖZÇELİK</h4>
+                                <p>
+                                    <span data-key="about11">Yurt İçi Danışman</span><br>
+                                    <span>AFAD</span>
+                                </p>
+                                <div class="team__item__social"> <a href="#" class="linkedin"><i
+                                            class="fab fa-linkedin-in"></i></a> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/musahakanarslan.jpeg');">
+                            <div class="team__icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="team__item__text">
+                                <h4>Prof. Dr. Musa Hakan ARSLAN</h4>
+                                <p>
+                                    <span data-key="about11">Yurt İçi Akademik Danışman</span><br>
+                                    <span>Konya Teknik Üniversitesi</span>
+                                </p>
+                                <div class="team__item__social">
+                                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Doç. Dr. İsmail KOÇ -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="team__item" style="background-image: url('img/ekip/ismailkoc.png');">
+                            <div class="team__icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="team__item__text">
+                                <h4>Doç. Dr. İsmail KOÇ</h4>
+                                <p>Yurt İçi Araştırmacı<br>Konya Teknik Üniversitesi</p>
+                                <div class="team__item__social">
+                                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- Call to Action Button -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team__btn"> <a href="contact.html" data-key="meettheteam" class="primary-btn">Ekibimizle
+                            Tanışın</a> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/logo_beyaz5.PNG" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <!--<a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+                            <a href="https://www.linkedin.com/company/kurtar/"><i class="fa fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5 data-key="about">Hakkımızda</h5>
+                            <p data-key="footer1">2024 yılında kurulan Kurtar, yaratıcı çözümler üreten, ödüllü ve tam
+                                hizmet veren bir
+                                prodüksiyon şirketidir.</p>
+                            <a href="#" class="read__more" data-key="readmore">Devamını Oku <span
+                                    class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5 data-key="footer2">Kimiz</h5>
+                            <ul>
+                                <li><a data-key="team" href="about.html">Ekip</a></li>
+                                <li><a data-key="career" href="career.html">Kariyer</a></li>
+                                <li><a data-key="contact" href="contact.html">İletişim</a></li>
+                                <li><a data-key="location" href="contact.html">Lokasyonlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5 data-key="ourwork">Çalışmalarımız</h5>
+                            <ul>
+                                <li><a href="portfolio.html?filter=*" data-key="footer5">Tümü</a></li>
+                                <li><a href="portfolio.html?filter=.mobile" data-key="footer6">Mobil Uygulama</a></li>
+                                <li><a href="portfolio.html?filter=.web" data-key="footer7">Web Uygulama</a></li>
+                                <li><a href="portfolio.html?filter=.ai" data-key="footer8">Yapay Zeka</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5 data-key="footer3">Bülten</h5>
+                            <p data-key="footer4">Kurtar, yaratıcı çözümler üreten ödüllü bir prodüksiyon şirketidir.
+                            </p>
+                            <form action="#">
+                                <input data-key="mail" type="text" placeholder="E-posta">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="footer__copyright__text" data-key="title">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            KURTAR Projesi - Gazi Üniversitesi
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

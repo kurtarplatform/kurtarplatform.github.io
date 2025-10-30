@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtart - İş İlanı Modal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .demo-button {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .demo-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-container {
+            background: white;
+            width: 95%;
+            max-width: 900px;
+            max-height: 90vh;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+            position: relative;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .job-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .job-meta span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-content {
+            max-height: calc(90vh - 140px);
+            overflow-y: auto;
+            padding: 0;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 3px;
+        }
+
+        .content-section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #667eea;
+            font-size: 20px;
+        }
+
+        .job-description {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .requirements-list, .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .requirements-list li, .benefits-list li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .requirements-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .benefits-list li:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .application-form {
+            background: #f8f9fa;
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .file-upload {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-upload-label {
+            display: block;
+            padding: 20px;
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            text-align: center;
+            background: #f8f9ff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .file-upload:hover .file-upload-label {
+            background: #f0f4ff;
+            border-color: #5a6fd8;
+        }
+
+        .file-upload-icon {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .file-upload-text {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .file-upload-hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .file-preview {
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e8;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .file-preview.show {
+            display: block;
+        }
+
+        .file-preview-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .file-remove {
+            background: none;
+            border: none;
+            color: #dc3545;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .checkbox-group a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        @media (max-width: 768px) {
+            .modal-container {
+                width: 98%;
+                margin: 10px;
+            }
+
+            .job-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .job-title {
+                font-size: 24px;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            color: #28a745;
+        }
+
+        .success-message i {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .success-message h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <button class="demo-button" onclick="openJobModal()">
+            <i class="fas fa-briefcase"></i> Senior Kreatif Direktör - Detayları Görüntüle
+        </button>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="jobModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeJobModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h1 class="job-title">Senior Kreatif Direktör</h1>
+                <div class="job-meta">
+                    <span><i class="fas fa-building"></i> Yaratıcı Ekip</span>
+                    <span><i class="fas fa-map-marker-alt"></i> İstanbul</span>
+                    <span><i class="fas fa-clock"></i> Tam Zamanlı</span>
+                    <span><i class="fas fa-calendar-alt"></i> Hemen Başlayabilir</span>
+                </div>
+            </div>
+
+            <div class="modal-content" id="modalContent">
+                <div class="content-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        Pozisyon Hakkında
+                    </h3>
+                    <p class="job-description">
+                        Kurtart'ın yaratıcı ekibinin başında yer alacak, marka stratejilerini geliştirecek ve görsel kimlik projelerini yönetecek deneyimli bir Senior Kreatif Direktör arıyoruz. Bu pozisyon, şirketimizin yaratıcı vizyonunu yönlendiren ve müşteri projelerinde en üst düzeyde yaratıcı çözümler üreten kilit bir rol üstlenecektir.
+                    </p>
+                    <p class="job-description">
+                        Pozisyon sahibi, çok disiplinli bir ekiple çalışarak kampanyaların konseptinden uygulamasına kadar tüm süreçleri yönetecek ve müşteri beklentilerini aşan yaratıcı çözümler geliştirecektir.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-tasks"></i>
+                        İş Tanımı & Sorumluluklar
+                    </h3>
+                    <ul class="requirements-list">
+                        <li>Yaratıcı ekibin liderliğini yaparak, tüm yaratıcı süreçlerin koordinasyonunu sağlamak</li>
+                        <li>Marka stratejileri geliştirmek ve görsel kimlik projelerini yönetmek</li>
+                        <li>Müşteri brifleri doğrultusunda yaratıcı konseptler üretmek</li>
+                        <li>Reklam kampanyaları, dijital içerikler ve basılı materyallerin yaratıcı süreçlerini yönetmek</li>
+                        <li>Ekip içi yaratıcı gelişim programları düzenlemek</li>
+                        <li>Proje bütçeleri ve zamanlamalarının takibini yapmak</li>
+                        <li>Müşteri sunumları ve kreatif pitch'lerde yer almak</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-user-graduate"></i>
+                        Aranan Özellikler
+                    </h3>
+                    <ul class="requirements-list">
+                        <li>Reklam, pazarlama veya ilgili alanlarda en az 7 yıl deneyim</li>
+                        <li>Kreatif direktörlük pozisyonunda en az 3 yıl deneyim</li>
+                        <li>Adobe Creative Suite programlarında ileri düzey bilgi</li>
+                        <li>Güçlü liderlik ve ekip yönetimi becerileri</li>
+                        <li>Mükemmel iletişim ve sunum yetenekleri</li>
+                        <li>Yaratıcı problem çözme becerisi</li>
+                        <li>İngilizce orta-ileri düzey</li>
+                        <li>Trend takibi ve yenilikçi düşünce yapısı</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-star"></i>
+                        Sunduklarımız
+                    </h3>
+                    <ul class="benefits-list">
+                        <li>Rekabetçi maaş ve performans primleri</li>
+                        <li>Kapsamlı sağlık sigortası (kendisi ve aile üyeleri için)</li>
+                        <li>Esnek çalışma saatleri ve hibrit çalışma imkanı</li>
+                        <li>Yaratıcı gelişim eğitimleri ve uluslararası konferans katılımları</li>
+                        <li>Modern ofis ortamı ve son teknoloji yaratıcı çalışma alanları</li>
+                        <li>Takım etkinlikleri ve sosyal aktiviteler</li>
+                        <li>Yıllık izin + ekstra wellness günleri</li>
+                        <li>Ulaşım ve yemek yardımı</li>
+                    </ul>
+                </div>
+
+                <div class="application-form">
+                    <h3 class="section-title">
+                        <i class="fas fa-paper-plane"></i>
+                        Başvuru Formu
+                    </h3>
+                    
+                    <form id="applicationForm" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Ad Soyad *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profili</label>
+                                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="portfolio">Portfolio/Website</label>
+                            <input type="url" id="portfolio" name="portfolio" placeholder="https://...">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>CV Yükle *</label>
+                                <div class="file-upload">
+                                    <input type="file" id="cvFile" name="cvFile" accept=".pdf,.doc,.docx" required onchange="handleFileUpload('cvFile', 'cvPreview')">
+                                    <div class="file-upload-label">
+                                        <div class="file-upload-icon">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                        </div>
+                                        <div class="file-upload-text">CV Dosyası Seçin</div>
+                                        <div class="file-upload-hint">PDF, DOC, DOCX (Max 5MB)</div>
+                                    </div>
+                                </div>
+                                <div class="file-preview" id="cvPreview"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Motivasyon Mektubu</label>
+                                <div class="file-upload">
+                                    <input type="file" id="motivationFile" name="motivationFile" accept=".pdf,.doc,.docx" onchange="handleFileUpload('motivationFile', 'motivationPreview')">
+                                    <div class="file-upload-label">
+                                        <div class="file-upload-icon">
+                                            <i class="fas fa-file-alt"></i>
+                                        </div>
+                                        <div class="file-upload-text">Motivasyon Mektubu Seçin</div>
+                                        <div class="file-upload-hint">PDF, DOC, DOCX (Max 5MB)</div>
+                                    </div>
+                                </div>
+                                <div class="file-preview" id="motivationPreview"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Kısa Tanıtım Mesajı</label>
+                            <textarea id="message" name="message" placeholder="Neden bu pozisyon için uygun olduğunuzu kısaca açıklayın..."></textarea>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">
+                                Kişisel verilerimin işlenmesine ve saklanmasına onay veriyorum. 
+                                <a href="#" target="_blank">KVKK Aydınlatma Metni</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Başvurumu Gönder
+                        </button>
+                    </form>
+
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Başvurunuz Alındı!</h3>
+                        <p>En kısa sürede size dönüş yapacağız. Teşekkür ederiz!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openJobModal() {
+            document.getElementById('jobModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeJobModal() {
+            document.getElementById('jobModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking overlay
+        document.getElementById('jobModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeJobModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeJobModal();
+            }
+        });
+
+        function handleFileUpload(inputId, previewId) {
+            const input = document.getElementById(inputId);
+            const preview = document.getElementById(previewId);
+            const file = input.files[0];
+
+            if (file) {
+                // Check file size (5MB limit)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('Dosya boyutu 5MB\'dan büyük olamaz!');
+                    input.value = '';
+                    return;
+                }
+
+                // Check file type
+                const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                if (!allowedTypes.includes(file.type)) {
+                    alert('Sadece PDF, DOC ve DOCX dosyaları kabul edilir!');
+                    input.value = '';
+                    return;
+                }
+
+                // Show file preview
+                preview.innerHTML = `
+                    <div class="file-preview-item">
+                        <div class="file-info">
+                            <i class="fas fa-file-alt" style="color: #667eea;"></i>
+                            <span>${file.name}</span>
+                            <small style="color: #999;">(${(file.size / 1024 / 1024).toFixed(2)} MB)</small>
+                        </div>
+                        <button type="button" class="file-remove" onclick="removeFile('${inputId}', '${previewId}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                preview.classList.add('show');
+            }
+        }
+
+        function removeFile(inputId, previewId) {
+            document.getElementById(inputId).value = '';
+            document.getElementById(previewId).classList.remove('show');
+            document.getElementById(previewId).innerHTML = '';
+        }
+
+        // Form submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const modalContent = document.getElementById('modalContent');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+            
+            // Simulate form submission
+            setTimeout(() => {
+                modalContent.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    closeJobModal();
+                    this.reset();
+                    document.querySelectorAll('.file-preview').forEach(preview => {
+                        preview.classList.remove('show');
+                        preview.innerHTML = '';
+                    });
+                    modalContent.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Başvurumu Gönder';
+                }, 3000);
+            }, 2000);
+        });
+
+        // Smooth scroll for modal content
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.addEventListener('scroll', function() {
+            const scrolled = modalContent.scrollTop;
+            const header = document.querySelector('.modal-header');
+            
+            if (scrolled > 50) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

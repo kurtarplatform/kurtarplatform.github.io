@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kurtar Kariyer Sayfası">
+    <meta name="keywords" content="Kurta, kariyer, iş ilanları, işe alım, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KURTAR</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<script src="js/language.js"></script>
+<style>
+.blog .services.spad {
+  padding-top: 0 !important;
+}
+
+.blog .services .services__title,
+.blog .services .section-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.blog .services .section-title h2 {
+  margin-top: 0 !important;
+}
+.no-top-gap { padding-top: 0 !important; }
+.no-top-gap .section-title,
+.no-top-gap .services__title { margin-top: 0 !important; padding-top: 0 !important; }
+.no-top-gap .section-title h2 { margin-top: 0 !important; }
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px; 
+  background: #00bfe7; 
+  border-radius: 2px;
+}
+
+</style>
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo_beyaz5.PNG" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a data-key="home" href="./index.html">Ana Sayfa</a></li>
+                                <li><a data-key="about" href="./about.html">Hakkımızda</a></li>
+                                <li><a data-key="portfolio" href="./portfolio.html">Portfolio</a></li>
+                                <li><a data-key="services" href="./services.html">SSS</a></li>
+                                <li class="active"><a data-key="career" href="./career.html">Kariyer</a></li>
+                                <li><a data-key="contact" href="./contact.html">İletişim</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+                            <a href="https://www.linkedin.com/company/kurtar/"><i class="fa fa-linkedin-in"></i></a>
+                            <a href="#" onclick="changeLang('en')">
+                                <img src="https://flagcdn.com/us.svg" alt="EN" class="flag-lang">
+                            </a>
+                            <a href="#" onclick="changeLang('tr')">
+                                <img src="https://flagcdn.com/tr.svg" alt="TR" class="flag-lang">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="img/hero/hero14.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2 data-key="pagetitle_career">Kariyer</h2>
+                        <div class="breadcrumb__links">
+                            <a data-key="pagetitle_main" href="index.html">Ana Sayfa</a>
+                            <span data-key="pagetitle_career">Kariyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Career Section Begin -->
+<section class="services spad no-top-gap">
+        <div class="container">
+            <!-- Services Section Begin -->
+            <section class="services spad">
+                <div class="container">
+                    <div>
+                        <div class="middle">
+                            <div class="services__title">
+                                <div class="section-title">
+                                    <h2 data-key="career_info1">Ekibimize katılın!</h2>
+                                </div>
+
+                                <p data-key="aım1" class="career-intro">
+                                    Gazi Üniversitesi Bilgisayar Mühendisliği yürütücülüğünde geliştirilen ve TÜBİTAK
+                                    1001 desteği alan KURTAR Projesi, afet sonrası arama-kurtarma süreçlerinde enkaz
+                                    altındaki bireylerin konumunu tespit etmeyi, hayatta kalma olasılığını tahmin etmeyi
+                                    ve karar süreçlerini yapay zekâ ile optimize etmeyi amaçlayan yenilikçi bir
+                                    sistemdir.
+                                </p>
+
+                                <h4 data-key="alım2" class="career-title">Aranan Nitelikler</h4>
+                                <ul class="career-list">
+                                    <li data-key="alım3">Python tabanlı yapay zekâ / derin öğrenme model geliştirme (TensorFlow, PyTorch)
+                                    </li>
+                                    <li data-key="alım4">Veri analizi, model eğitimi ve performans değerlendirme süreçleri</li>
+                                    <li data-key="alım5">Edge AI ve mobil cihazlarda model çalıştırma (ONNX, TensorFlow Lite, CoreML vb.)
+                                    </li>
+                                    <li data-key="alım6">IoT platformları (Raspberry Pi, Jetson, sensör sistemleri)</li>
+                                    <li data-key="alım7">Linux ortamı, Git, Docker vb. araçlara hâkimiyet</li>
+                                    <li data-key="alım8">Takım çalışması, hızlı öğrenme ve uyum sağlama becerisi</li>
+                                </ul>
+
+                                <h4 data-key="alım9" class="career-title">Uygunluk Kriterleri</h4>
+                                <ul class="career-list">
+                                    <li data-key="alım10">İlgili mühendislik alanlarında lisans veya lisansüstü öğrenci olmak</li>
+                                    <li data-key="alım11">Tercihen proje / yarışma / Ar-Ge geçmişi veya akademik deneyim</li>
+                                    <li data-key="alım12">Proje yürütücüleri ile aktif iletişim ve sorumluluk bilinci</li>
+                                </ul>
+
+                                <h4 data-key="alım13" class="career-title">Süreç ve Destek</h4>
+                                <ul class="career-list">
+                                    <li data-key="alım14">İlk etapta 2 aylık deneme ve oryantasyon süreci</li>
+                                    <li data-key="alım15">TÜBİTAK bursiyerlik desteği</li>
+                                    <li data-key="alım16" >Akademik rehberlik, teknik eğitim ve araştırma katkısı fırsatları</li>
+                                </ul>
+
+                                <p class="career-apply">
+    <h4 data-key="alım17" class="career-title">APPLICATION</h4>
+    <span data-key="alım18">Send your CV and a short motivation letter</span> 
+    <b class="career-apply b">kurtar1001@gmail.com</b> 
+    <span data-key="alım19">to the following address:</span>
+    <br><br>
+    <span data-key="alım20">🔗 KURTAR is an innovative research platform combining IoT, artificial intelligence, and real-time disaster management.</span>
+    <br>
+    <strong class="career-apply strong" data-key="alım21">Become part of a team that will save lives with the technologies of the future!</strong>
+</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .career-intro {
+                            text-align: center;
+                            max-width: 800px;
+                            margin: 0 auto 20px;
+                            line-height: 1.6;
+                            font-size: 18px;
+                        }
+
+                        .career-apply {
+                            text-align: center;
+                            font-size: 18px;
+                            line-height: 1.8;
+                            max-width: 800px;
+                            margin: 30px auto;
+                            color: #fff;
+                            font-weight: 500;
+                        }
+
+                        .career-apply b {
+                            font-size: 20px;
+                            color: #ffd700;
+                        }
+
+                        .career-apply strong {
+                            font-size: 19px;
+                            color: #ffffff;
+                        }
+
+                        .career-title {
+                            color: #fff;
+                            margin-top: 25px;
+                            font-size: 20px;
+                            font-weight: 700;
+                        }
+
+                        .career-list {
+                            list-style-position: inside;
+                            display: inline-block;
+                            text-align: left;
+                            padding-left: 0;
+                            margin: 0 auto 20px;
+                        }
+
+                        .middle {
+                            text-align: center;
+                        }
+                    </style>
+                    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                    <script>
+                        (function () {
+                            emailjs.init("NK8m0CTmHfcokQFdN");
+
+                            // CV buton tıklama ve dosya adını gösterme
+                            document.getElementById('cv-btn').addEventListener('click', function () {
+                                document.getElementById('cv-upload').click();
+                            });
+                            document.getElementById('cv-upload').addEventListener('change', function () {
+                                const fileName = this.files[0] ? this.files[0].name : "Henüz dosya seçilmedi";
+                                document.getElementById('cv-name').textContent = fileName;
+                            });
+
+                            // Form gönderimi
+                            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                                e.preventDefault();
+                                emailjs.sendForm('service_0ts53nf', 'template_u2ty70e', this)
+                                    .then((response) => {
+                                        console.log("EmailJS Response:", response);
+                                        showSuccessDialog();
+                                        this.reset();
+                                        document.getElementById('cv-name').textContent = "Henüz dosya seçilmedi";
+                                    })
+                                    .catch((error) => {
+                                        console.error("EmailJS Error:", error);
+                                        alert('Gönderim başarısız. Lütfen tekrar deneyin.');
+                                    });
+                            });
+                        })();
+                        function showSuccessDialog() {
+                            const messages = {
+                                tr: "Başarıyla gönderildi!",
+                                en: "Successfully sent!"
+                            };
+
+                            const currentLang = document.documentElement.lang === 'tr' ? 'tr' : 'en';
+                            const overlay = document.createElement('div');
+                            overlay.style.position = 'fixed';
+                            overlay.style.top = '0';
+                            overlay.style.left = '0';
+                            overlay.style.width = '100%';
+                            overlay.style.height = '100%';
+                            overlay.style.background = 'rgba(0, 0, 0, 0.6)';
+                            overlay.style.backdropFilter = 'blur(8px)';
+                            overlay.style.zIndex = '9999';
+                            overlay.style.animation = 'overlayFadeIn 0.3s ease';
+
+                            const dialog = document.createElement('div');
+                            dialog.style.position = 'fixed';
+                            dialog.style.top = '50%';
+                            dialog.style.left = '50%';
+                            dialog.style.transform = 'translate(-50%, -50%)';
+                            dialog.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                            dialog.style.padding = '40px 60px';
+                            dialog.style.borderRadius = '24px';
+                            dialog.style.boxShadow = '0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1) inset';
+                            dialog.style.textAlign = 'center';
+                            dialog.style.zIndex = '10000';
+                            dialog.style.animation = 'dialogSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                            dialog.style.minWidth = '320px';
+
+                            const iconWrapper = document.createElement('div');
+                            iconWrapper.style.width = '80px';
+                            iconWrapper.style.height = '80px';
+                            iconWrapper.style.margin = '0 auto 20px';
+                            iconWrapper.style.background = 'rgba(255, 255, 255, 0.2)';
+                            iconWrapper.style.borderRadius = '50%';
+                            iconWrapper.style.display = 'flex';
+                            iconWrapper.style.alignItems = 'center';
+                            iconWrapper.style.justifyContent = 'center';
+                            iconWrapper.style.animation = 'iconPulse 0.6s ease';
+                            iconWrapper.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+
+                            const checkmark = document.createElement('div');
+                            checkmark.innerHTML = '✓';
+                            checkmark.style.fontSize = '48px';
+                            checkmark.style.color = '#fff';
+                            checkmark.style.fontWeight = 'bold';
+                            checkmark.style.animation = 'checkmarkDraw 0.5s ease 0.2s backwards';
+                            iconWrapper.appendChild(checkmark);
+
+                            const title = document.createElement('h3');
+                            title.textContent = messages[currentLang];
+                            title.style.color = '#fff';
+                            title.style.fontSize = '22px';
+                            title.style.fontWeight = '600';
+                            title.style.margin = '0';
+                            title.style.letterSpacing = '0.5px';
+                            title.style.textShadow = '0 2px 10px rgba(0,0,0,0.2)';
+                            title.style.animation = 'textFadeIn 0.5s ease 0.3s backwards';
+
+                            const particles = document.createElement('div');
+                            particles.style.position = 'absolute';
+                            particles.style.top = '50%';
+                            particles.style.left = '50%';
+                            particles.style.transform = 'translate(-50%, -50%)';
+                            particles.style.width = '100%';
+                            particles.style.height = '100%';
+                            particles.style.pointerEvents = 'none';
+                            particles.style.overflow = 'hidden';
+                            particles.style.borderRadius = '24px';
+
+                            for (let i = 0; i < 12; i++) {
+                                const particle = document.createElement('div');
+                                particle.style.position = 'absolute';
+                                particle.style.width = '6px';
+                                particle.style.height = '6px';
+                                particle.style.background = 'rgba(255, 255, 255, 0.8)';
+                                particle.style.borderRadius = '50%';
+                                particle.style.top = '50%';
+                                particle.style.left = '50%';
+                                particle.style.animation = `particle${i} 1s ease-out forwards`;
+                                particles.appendChild(particle);
+                            }
+
+                            dialog.appendChild(particles);
+                            dialog.appendChild(iconWrapper);
+                            dialog.appendChild(title);
+
+                            document.body.appendChild(overlay);
+                            document.body.appendChild(dialog);
+
+                            setTimeout(() => {
+                                dialog.style.animation = 'dialogSlideOut 0.4s ease forwards';
+                                overlay.style.animation = 'overlayFadeOut 0.4s ease forwards';
+                                setTimeout(() => {
+                                    dialog.remove();
+                                    overlay.remove();
+                                }, 400);
+                            }, 3000);
+                        }
+
+                        const style = document.createElement('style');
+                        style.innerHTML = `
+@keyframes overlayFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes overlayFadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes dialogSlideIn { from { opacity: 0; transform: translate(-50%, -50%) scale(0.7) rotateX(20deg);} to { opacity: 1; transform: translate(-50%, -50%) scale(1) rotateX(0deg);} }
+@keyframes dialogSlideOut { from { opacity: 1; transform: translate(-50%, -50%) scale(1);} to { opacity: 0; transform: translate(-50%, -60%) scale(0.9);} }
+@keyframes iconPulse { 0% {transform: scale(0); opacity: 0;} 50% {transform: scale(1.1);} 100% {transform: scale(1); opacity: 1;} }
+@keyframes checkmarkDraw { 0% {transform: scale(0) rotate(-45deg); opacity: 0;} 100% {transform: scale(1) rotate(0deg); opacity: 1;} }
+@keyframes textFadeIn { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+${[...Array(12)].map((_, i) => {
+                            const angle = (i * 30) * Math.PI / 180;
+                            const distance = 60;
+                            const x = Math.cos(angle) * distance;
+                            const y = Math.sin(angle) * distance;
+                            return `
+@keyframes particle${i} {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(${x}px, ${y}px) scale(0); opacity: 0; }
+}`;
+                        }).join('\n')}
+`;
+                        document.head.appendChild(style);
+                    </script>
+                </div>
+            </section>
+            <style>
+                .contact__form .button1 {
+                    flex: 1;
+                    font-size: 15px;
+                    color: #fff;
+                    background: #00bfe7;
+                    font-family: 'Play', sans-serif;
+                    font-weight: 700;
+                    border: none;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    padding: 14px 34px 12px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                }
+
+                .contact__form .button1:hover {
+                    background: #00a0c0;
+                }
+
+                #cv-name {
+                    color: #fff;
+                    margin-left: 10px;
+                }
+
+                .contact__form .full-width-btn {
+                    width: 100%;
+                    margin-top: 10px;
+                    display: block;
+                }
+            </style>
+
+            <script>
+                const cvBtn = document.getElementById('cv-btn');
+                const cvInput = document.getElementById('cv-upload');
+                const cvName = document.getElementById('cv-name');
+
+                cvBtn.addEventListener('click', () => {
+                    cvInput.click();
+                });
+
+                cvInput.addEventListener('change', () => {
+                    if (cvInput.files.length > 0) {
+                        cvName.textContent = cvInput.files[0].name;
+                    } else {
+                        cvName.textContent = 'Henüz dosya seçilmedi';
+                    }
+                });
+            </script>
+
+    
+    </section>
+    <!-- Career Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/logo_beyaz5.PNG" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <!--<a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+                            <a href="https://www.linkedin.com/company/kurtar/"><i class="fa fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5 data-key="about">Hakkımızda</h5>
+                            <p data-key="footer1">2024 yılında kurulan Kurtar, yaratıcı çözümler üreten, ödüllü ve tam
+                                hizmet veren bir
+                                prodüksiyon şirketidir.</p>
+                            <a href="#" class="read__more" data-key="readmore">Devamını Oku <span
+                                    class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5 data-key="footer2">Kimiz</h5>
+                            <ul>
+                                <li><a data-key="team" href="about.html">Ekip</a></li>
+                                <li><a data-key="career" href="career.html">Kariyer</a></li>
+                                <li><a data-key="contact" href="contact.html">İletişim</a></li>
+                                <li><a data-key="location" href="contact.html">Lokasyonlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5 data-key="ourwork">Çalışmalarımız</h5>
+                            <ul>
+                                <li><a href="portfolio.html?filter=*" data-key="footer5">Tümü</a></li>
+                                <li><a href="portfolio.html?filter=.mobile" data-key="footer6">Mobil Uygulama</a></li>
+                                <li><a href="portfolio.html?filter=.web" data-key="footer7">Web Uygulama</a></li>
+                                <li><a href="portfolio.html?filter=.ai" data-key="footer8">Yapay Zeka</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5 data-key="footer3">Bülten</h5>
+                            <p data-key="footer4">Kurtar, yaratıcı çözümler üreten ödüllü bir prodüksiyon şirketidir.
+                            </p>
+                            <form action="#">
+                                <input data-key="mail" type="text" placeholder="E-posta">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="footer__copyright__text" data-key="title">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            KURTAR Projesi - Gazi Üniversitesi
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="careerModal" tabindex="-1" role="dialog" aria-labelledby="careerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="careerModalLabel">Kariyer Detayları</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                        Yaratıcı ekibimizin başında yer alacak, marka stratejilerini geliştiren ve görsel kimlik
+                        projelerini yönetecek deneyimli bir Senior Kreatif Direktör arıyoruz...
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

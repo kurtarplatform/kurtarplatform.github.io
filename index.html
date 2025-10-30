@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Videograph Template">
+    <meta name="keywords" content="Videograph, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KURTAR</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<script src="js/language.js"></script>
+
+
+<style>
+.callto {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: #fff;
+}
+
+.callto__text {
+  z-index: 2;
+}
+
+.logos-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.proj-logo {
+  width: 160px;        
+  height: 160px;      
+  object-fit: contain; 
+  border-radius: 25px;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.proj-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .callto {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .logos-wrapper {
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .proj-logo {
+    width: 120px;
+  }
+}
+
+</style>
+<body>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo_beyaz5.PNG" alt=""></a>
+                        <!-- 4 numaralıda logo daha büyük-->
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a data-key="home" href="./index.html">Ana Sayfa</a></li>
+                                <li><a data-key="about" href="./about.html">Hakkımızda</a></li>
+                                <li><a data-key="portfolio" href="./portfolio.html">Portfolio</a></li>
+                                <li><a data-key="services" href="./services.html">SSS</a></li>
+                                <li><a data-key="career" href="./career.html">Kariyer</a></li>
+                                <li><a data-key="contact" href="./contact.html">İletişim</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+                            <a href="https://www.linkedin.com/company/kurtar/"><i class="fa fa-linkedin-in"></i></a>
+                            <a href="#" onclick="changeLang('en')">
+                                <img src="https://flagcdn.com/us.svg" alt="EN" class="flag-lang">
+                            </a>
+                            <a href="#" onclick="changeLang('tr')">
+                                <img src="https://flagcdn.com/tr.svg" alt="TR" class="flag-lang">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item set-bg" data-setbg="img/hero/hero3.png">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h2>KURTAR</h2>
+
+                                <span data-key="main_info1">IoT ve Yapay Zeka Temelli Afet Müdahale Platformu</span>
+                                <span data-key="main_info2" style="font-size: 10px;">
+                                    Deprem anında çoklu sensör verisini gerçek zamanlı analiz eder, enkaz altındaki
+                                    kişileri ve öncelikli bölgeleri belirleyerek ekipleri doğru yere yönlendirir.
+                                </span>
+                                <a data-key="main_info3" href="about.html" class="primary-btn">Hakkımızda daha fazlasını
+                                    görün</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/hero/hero2.png">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h2>KURTAR</h2>
+
+                                <span data-key="main_info1">IoT ve Yapay Zeka Temelli Afet Müdahale Platformu</span>
+                                <span data-key="main_info2" style="font-size: 10px;">
+                                    Deprem anında çoklu sensör verisini gerçek zamanlı analiz eder, enkaz altındaki
+                                    kişileri ve öncelikli bölgeleri belirleyerek ekipleri doğru yere yönlendirir.
+                                </span>
+                                <a data-key="main_info4" href="portfolio.html" class="primary-btn">Çözümlerimizi
+                                    inceleyin</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="hero__item set-bg" data-setbg="img/hero/hero-2.png">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <span>IoT ve Yapay Zeka Temelli Afet Müdahale Platformu</span>
+                                <h2>KURTAR</h2>
+                                <a href="#" class="primary-btn">Hakkımızda daha fazlasını görün</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="services__title">
+                        <div class="section-title">
+
+                            <h2 data-key="main_info5">Proje Hakkında</h2>
+                        </div>
+                        <p data-key="main_info6">Afet anında mobil cihazlar ve IoT teknolojileri üzerinden gerçek
+                            zamanlı veri toplayarak,
+                            otonom karar verme yeteneklerine sahip yapay zeka sistemleri ile kurtarma süreçlerini
+                            optimize etmeyi hedeflemektedir. Sensörlerden gelen veriler, makine öğrenmesi ve derin
+                            öğrenme destekli analizlerle anlamlandırılarak, merkezi sunuculara aktarılır ve harita
+                            tabanlı arayüzlerle koordinasyon sağlanır..</p>
+                        <a data-key="main_info7" href="about.html" class="primary-btn">Daha fazla</a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/ai.png" alt="">
+                                </div>
+                                <h4 data-key="main_info8">Yapay Zeka</h4>
+                                <p data-key="main_info9">Zaman serisi analizleri, afet davranış modellemesi ve destek
+                                    sistemleri için veri
+                                    odaklı karar mekanizmaları.
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/iot.png" alt="">
+                                </div>
+                                <h4 data-key="main_info10">IoT & Sensör Ağı</h4>
+                                <p data-key="main_info11">IMU, jiroskop, GPS ve çevresel sensörlerle veri toplanması ve
+                                    merkezi sunucuya
+                                    iletim.
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/mobil.png" alt="">
+                                </div>
+                                <h4 data-key="main_info12">Mobil Platform</h4>
+                                <p data-key="main_info13">Android/iOS tabanlı uygulamalarla gerçek zamanlı konum
+                                    bildirimi ve enerji
+                                    optimizasyonu.
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/map.png" alt="">
+                                </div>
+                                <h4 data-key="main_info14">Haritalama & Koordinasyon
+                                </h4>
+                                <p data-key="main_info15">Sunucuda analiz, harita ile yıkım ve kurtarma görselleştirme.
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/mechanism.png" alt="">
+                                </div>
+                                <h4 data-key="main_info16">Sürdürülebilir Mekanizma
+                                </h4>
+                                <p data-key="main_info17">Güncellenebilir, modüler, düşük güç tüketimli yapılarla uzun
+                                    süreli çalışabilirlik.
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="img/icons/analysis.png" alt="">
+                                </div>
+                                <h4 data-key="main_info18">Yaşam Alanı Analizi
+                                </h4>
+                                <p data-key="main_info19">Deprem sonrası ortam koşullarının değerlendirilmesi ve
+                                    müdahale önceliklendirmesi.
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <section class="audience spad">
+        <div class="container">
+            <div class="section-title center-title">
+                <h2 data-key="main_info20">Kimler İçin?</h2>
+            </div>
+            <div class="row">
+                <!-- Kart 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="audience__card">
+                        <i class="fas fa-satellite-dish"></i>
+                        <h4 data-key="main_info21">Kamu Kurumları</h4>
+                        <h4 data-key="main_info22">(AFAD / Belediye)</h3>
+                            <p data-key="main_info23">Kriz masası için gerçek zamanlı görünürlük sağlar. Durum
+                                yönetimini kolaylaştırır.</p>
+                    </div>
+                </div>
+
+                <!-- Kart 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="audience__card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4 data-key="main_info24">STK & Gönüllüler</h4>
+                        <p data-key="main_info25">Gönüllü ekiplerin yönetimi, güvenli alan belirleme ve rota paylaşımı
+                            ile destek sağlar.</p>
+                    </div>
+                </div>
+
+                <!-- Kart 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="audience__card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4 data-key="main_info26">Vatandaş</h4>
+                        <p data-key="main_info27">Konum ve durum bildirimi ile hızlı yardım çağrısı sağlar. Güvenli
+                            alanlar hakkında bilgi
+                            sunar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="latest spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title center-title">
+                        <!-- <span>Our Blog</span> -->
+                        <h2 data-key="main_info28">NASIL ÇALIŞIR ?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="latest__slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item item1">
+                            <h4 data-key="main_info29">Veri Toplama</h4>
+                            <!-- <ul>
+                                <li>Jan 03, 2020</li>
+                                <li>05 Comment</li>
+                            </ul> -->
+                            <p data-key="main_info30">Mobil cihazlar ve bağlı sensörler, sarsıntı ve çevresel verileri
+                                gerçek zamanlı olarak
+                                toplar.
+
+                            </p>
+                            <a data-key="readmore" href="portfolio.html">Devamını oku<span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item item2">
+                            <h4 data-key="main_info31">Algılama</h4>
+
+                            <p data-key="main_info32">Veriler, cihaz üzerinde çalışan yapay zeka modelleriyle analiz
+                                edilerek sarsıntı ve afet
+                                bilgisi çıkarılır.</p>
+                            <a data-key="readmore" href="portfolio.html">Devamını oku<span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog__item latest__item item3">
+                            <h4 data-key="main_info33">Yanıt Verme</h4>
+
+                            <p data-key="main_info34">Sunucular, toplu analizlerle durumu haritalar ve kurtarma
+                                ekiplerine rota, risk ve konum
+                                önerileri sunar.
+                            </p>
+                            <a data-key="readmore" href="portfolio.html">Devamını oku<span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section Begin -->
+
+
+    <!-- Team Section End -->
+
+
+
+<section class="burslu spad" id="forms">
+  <div class="container">
+    <div class="section-title center-title">
+      <h2 data-i18n="formSectionTitle" data-key="formSectionTitle">Formlar</h2>
+    </div>
+
+    <div class="download-container">
+
+      <div class="download-icon">
+        <i class="fas fa-file-download"></i>
+      </div>
+
+      <div class="download-info">
+        <p data-i18n="formDownloadDescription" data-key="formDownloadDescription">
+          Burslu öğrenci ve doktora sonrası bursiyer bilgi formunu indirmek için aşağıdaki butona tıklayın.
+        </p>
+      </div>
+
+      <a href="forms/burslu_ogrenci_ve_postdoktora_bilgi_formu_05.02.2025.docx"
+         download
+         class="primary-btn"
+         data-i18n="formDownloadButton" data-key="formDownloadButton">
+        Formu İndir <i class="fas fa-download"></i>
+      </a>
+
+      <div class="file-details">
+        <div class="file-detail-item">
+          <i class="fas fa-file-word"></i>
+          <span data-i18n="formFormat" data-key="formFormat">DOCX Formatı</span>
+        </div>
+        <div class="file-detail-item">
+          <i class="fas fa-calendar"></i>
+          <span data-i18n="formUpdate" data-key="formUpdate">Güncelleme: 05.02.2025</span>
+        </div>
+        <div class="file-detail-item">
+          <i class="fas fa-language"></i>
+          <span data-i18n="formLanguage" data-key="formLanguage">Türkçe</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Latest Blog Section Begin -->
+
+    <!-- Latest Blog Section End -->
+
+    <!-- Call To Action Section Begin -->
+    <section class="callto spad set-bg" data-setbg="img/111.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="callto__text">
+          <h2 data-key="main_info35">Proje Bilgisi</h2>
+          <p data-key="main_info36">
+            KURTAR projesi, TÜBİTAK 1001 kapsamında desteklenmektedir.
+            Proje detayları için aşağıdaki bağlantıya tıklayabilirsiniz.
+          </p>
+          <a data-key="main_info37"
+             href="https://gazi.edu.tr/view/news/298726/tubitak-1001-bilimsel-ve-teknolojik-arastirma-projelerini-destekleme-programi-kapsaminda-3-proje-d"
+             class="btn-link">
+             Gazi Üniversitesi Haber Duyurusu
+          </a>
+        </div>
+      </div>
+<div class="col-lg-4 logos-wrapper">
+  <a href="https://www.tubitak.gov.tr" target="_blank" rel="noopener noreferrer">
+    <img src="img/tubitak_logo.png" alt="TÜBİTAK" class="proj-logo">
+  </a>
+  <a href="https://www.afad.gov.tr" target="_blank" rel="noopener noreferrer">
+    <img src="img/afad_logo.png" alt="AFAD" class="proj-logo">
+  </a>
+</div>
+
+  </div>
+</section>
+    <!-- Call To Action Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/logo_beyaz5.PNG" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <!--<a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+                            <a href="https://www.linkedin.com/company/kurtar/"><i class="fa fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5 data-key="about">Hakkımızda</h5>
+                            <p data-key="footer1">2024 yılında kurulan Kurtar, yaratıcı çözümler üreten, ödüllü ve tam
+                                hizmet veren bir
+                                prodüksiyon şirketidir.</p>
+                            <a href="about.html" class="read__more" data-key="readmore">Devamını Oku <span
+                                    class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5 data-key="footer2">Kimiz</h5>
+                            <ul>
+                                <li><a data-key="team" href="about.html">Ekip</a></li>
+                                <li><a data-key="career" href="career.html">Kariyer</a></li>
+                                <li><a data-key="contact" href="contact.html">İletişim</a></li>
+                                <li><a data-key="location" href="contact.html">Lokasyonlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5 data-key="ourwork">Çalışmalarımız</h5>
+                            <ul>
+                                <li><a href="portfolio.html?filter=*" data-key="footer5">Tümü</a></li>
+                                <li><a href="portfolio.html?filter=.mobile" data-key="footer6">Mobil Uygulama</a></li>
+                                <li><a href="portfolio.html?filter=.web" data-key="footer7">Web Uygulama</a></li>
+                                <li><a href="portfolio.html?filter=.ai" data-key="footer8">Yapay Zeka</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5 data-key="footer3">Bülten</h5>
+                            <p data-key="footer4">Kurtar, yaratıcı çözümler üreten ödüllü bir prodüksiyon şirketidir.
+                            </p>
+                            <form action="#">
+                                <input data-key="mail" type="text" placeholder="E-posta">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="footer__copyright__text" data-key="title">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            KURTAR Projesi - Gazi Üniversitesi
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
