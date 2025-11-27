@@ -86,10 +86,6 @@
         padding-bottom: 70px;
     }
 
-    .team__item {
-    height: 340px !important; // Tablet için daha yüksek olsun
-}
-
     .team__item.team__item--second {
         margin-top: 0;
     }
@@ -216,11 +212,6 @@
         padding-top: 100px;
         padding-bottom: 70px;
     }
-
-    .team__item {
-    height: 360px !important; // Mobilde resim kırpılmasın
-    background-position: center !important;
-}
 
     .team__item.team__item--second {
         margin-top: 0;
@@ -411,8 +402,4 @@
     .blog__details__quote {
         padding: 30px 40px 35px 35px;
     }
-    .team__item {
-    height: 380px !important;
-    background-position: center !important;
-}
 }
