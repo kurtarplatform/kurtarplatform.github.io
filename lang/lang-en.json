@@ -6,7 +6,7 @@
   "des4": "Provides alerts before the earthquake reaches your location.",
   "kurtarekibi": "Kurtar Team",
   "projectteam": "Project Team",
-  "mainteam": "Project Managers",
+  "mainteam": "Main Team",
   "interns": "Interns",
   "advisors": "Advisors / Academic Advisory Board",
   "meettheteam": "Meet Our Team",
@@ -25,10 +25,12 @@
   "contact": "Contact",
   "services": "FAQ",
   "career": "Career",
+  "newsfromus": "News From Us",
   "location": "Location",
   "ourwork": "Our Work",
   "pagetitle_main": "Home",
   "pagetitle_about": "About Us",
+  "pagetitle_newsfromus": "News From Us",
   "pagetitle_port": "Portfolio",
   "pagetitle_sss": "Frequently Asked Questions",
   "pagetitle_career": "Career",
@@ -187,6 +189,12 @@
   "alım18": "Send your CV and a short motivation letter",
   "alım19": "to the following address:",
   "alım20": "🔗 KURTAR is an innovative research platform combining IoT, artificial intelligence, and real-time disaster management.",
-  "alım21": "Become part of a team that will save lives with the technologies of the future!"
+  "alım21": "Become part of a team that will save lives with the technologies of the future!",
+
+  "newsfromus_info1": "AFAD Presıdent Hıghlıghts KURTAR Platform and Dısaster Communıcatıons",
+  "newsfromus_info2": "AFAD President Mr. Ali Hamza Pehlivan, speaking to Anadolu Agency on the anniversary of the February 6 earthquakes, addressed ongoing efforts to strengthen technological infrastructure and search and rescue capacity in disaster management. Referring to the enhancement of AFAD’s mobile communication infrastructure, Mr. Pehlivan also highlighted the KURTAR system, developed in collaboration with TÜBİTAK. He stated that even when internet connectivity is unavailable, communication between personnel can still be maintained through Bluetooth and offline communication capabilities. The KURTAR Platform continues to support efforts aimed at maintaining reliable communication among field teams during disasters and emergencies, particularly in situations where conventional communication infrastructure may be disrupted.",
+  "news.source.aa": "Anadolu Agency",
+    "news.readFull": "Read the full article ↗"
+
 
 }

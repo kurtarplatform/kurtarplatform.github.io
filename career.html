@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KURTAR</title>
-<link rel="icon" type="image/png" href="img/logotek.png">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
@@ -32,45 +31,56 @@
 </head>
 <script src="js/language.js"></script>
 <style>
-.blog .services.spad {
-  padding-top: 0 !important;
-}
+    .blog .services.spad {
+        padding-top: 0 !important;
+    }
 
-.blog .services .services__title,
-.blog .services .section-title {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+    .blog .services .services__title,
+    .blog .services .section-title {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
 
-.blog .services .section-title h2 {
-  margin-top: 0 !important;
-}
-.no-top-gap { padding-top: 0 !important; }
-.no-top-gap .section-title,
-.no-top-gap .services__title { margin-top: 0 !important; padding-top: 0 !important; }
-.no-top-gap .section-title h2 { margin-top: 0 !important; }
-.section-title h2 {
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  font-size: 32px;
-  font-weight: 700;
-  text-align: center;
-}
+    .blog .services .section-title h2 {
+        margin-top: 0 !important;
+    }
 
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px; 
-  background: #00bfe7; 
-  border-radius: 2px;
-}
+    .no-top-gap {
+        padding-top: 0 !important;
+    }
 
+    .no-top-gap .section-title,
+    .no-top-gap .services__title {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .no-top-gap .section-title h2 {
+        margin-top: 0 !important;
+    }
+
+    .section-title h2 {
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .section-title h2::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #00bfe7;
+        border-radius: 2px;
+    }
 </style>
+
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -87,11 +97,12 @@
                     </div>
                 </div>
                 <div class="col-lg-10">
-                    <div class="header__nav__option">
+                    <div class="header__nav__option" style="text-align: center; white-space: nowrap;">
                         <nav class="header__nav__menu mobile-menu">
                             <ul>
                                 <li><a data-key="home" href="./index.html">Ana Sayfa</a></li>
                                 <li><a data-key="about" href="./about.html">Hakkımızda</a></li>
+                                <li><a data-key="newsfromus" href="./newsfromus.html">Bizden Haberler</a></li>
                                 <li><a data-key="portfolio" href="./portfolio.html">Portfolio</a></li>
                                 <li><a data-key="services" href="./services.html">SSS</a></li>
                                 <li class="active"><a data-key="career" href="./career.html">Kariyer</a></li>
@@ -135,7 +146,7 @@
     <!-- Breadcrumb End -->
 
     <!-- Career Section Begin -->
-<section class="services spad no-top-gap">
+    <section class="services spad no-top-gap">
         <div class="container">
             <!-- Services Section Begin -->
             <section class="services spad">
@@ -157,10 +168,13 @@
 
                                 <h4 data-key="alım2" class="career-title">Aranan Nitelikler</h4>
                                 <ul class="career-list">
-                                    <li data-key="alım3">Python tabanlı yapay zekâ / derin öğrenme model geliştirme (TensorFlow, PyTorch)
+                                    <li data-key="alım3">Python tabanlı yapay zekâ / derin öğrenme model geliştirme
+                                        (TensorFlow, PyTorch)
                                     </li>
-                                    <li data-key="alım4">Veri analizi, model eğitimi ve performans değerlendirme süreçleri</li>
-                                    <li data-key="alım5">Edge AI ve mobil cihazlarda model çalıştırma (ONNX, TensorFlow Lite, CoreML vb.)
+                                    <li data-key="alım4">Veri analizi, model eğitimi ve performans değerlendirme
+                                        süreçleri</li>
+                                    <li data-key="alım5">Edge AI ve mobil cihazlarda model çalıştırma (ONNX, TensorFlow
+                                        Lite, CoreML vb.)
                                     </li>
                                     <li data-key="alım6">IoT platformları (Raspberry Pi, Jetson, sensör sistemleri)</li>
                                     <li data-key="alım7">Linux ortamı, Git, Docker vb. araçlara hâkimiyet</li>
@@ -169,28 +183,34 @@
 
                                 <h4 data-key="alım9" class="career-title">Uygunluk Kriterleri</h4>
                                 <ul class="career-list">
-                                    <li data-key="alım10">İlgili mühendislik alanlarında lisans veya lisansüstü öğrenci olmak</li>
-                                    <li data-key="alım11">Tercihen proje / yarışma / Ar-Ge geçmişi veya akademik deneyim</li>
-                                    <li data-key="alım12">Proje yürütücüleri ile aktif iletişim ve sorumluluk bilinci</li>
+                                    <li data-key="alım10">İlgili mühendislik alanlarında lisans veya lisansüstü öğrenci
+                                        olmak</li>
+                                    <li data-key="alım11">Tercihen proje / yarışma / Ar-Ge geçmişi veya akademik deneyim
+                                    </li>
+                                    <li data-key="alım12">Proje yürütücüleri ile aktif iletişim ve sorumluluk bilinci
+                                    </li>
                                 </ul>
 
                                 <h4 data-key="alım13" class="career-title">Süreç ve Destek</h4>
                                 <ul class="career-list">
                                     <li data-key="alım14">İlk etapta 2 aylık deneme ve oryantasyon süreci</li>
                                     <li data-key="alım15">TÜBİTAK bursiyerlik desteği</li>
-                                    <li data-key="alım16" >Akademik rehberlik, teknik eğitim ve araştırma katkısı fırsatları</li>
+                                    <li data-key="alım16">Akademik rehberlik, teknik eğitim ve araştırma katkısı
+                                        fırsatları</li>
                                 </ul>
 
                                 <p class="career-apply">
-    <h4 data-key="alım17" class="career-title">APPLICATION</h4>
-    <span data-key="alım18">Send your CV and a short motivation letter</span> 
-    <b class="career-apply b">kurtar1001@gmail.com</b> 
-    <span data-key="alım19">to the following address:</span>
-    <br><br>
-    <span data-key="alım20">🔗 KURTAR is an innovative research platform combining IoT, artificial intelligence, and real-time disaster management.</span>
-    <br>
-    <strong class="career-apply strong" data-key="alım21">Become part of a team that will save lives with the technologies of the future!</strong>
-</p>
+                                <h4 data-key="alım17" class="career-title">APPLICATION</h4>
+                                <span data-key="alım18">Send your CV and a short motivation letter</span>
+                                <b class="career-apply b">kurtar1001@gmail.com</b>
+                                <span data-key="alım19">to the following address:</span>
+                                <br><br>
+                                <span data-key="alım20">🔗 KURTAR is an innovative research platform combining IoT,
+                                    artificial intelligence, and real-time disaster management.</span>
+                                <br>
+                                <strong class="career-apply strong" data-key="alım21">Become part of a team that will
+                                    save lives with the technologies of the future!</strong>
+                                </p>
 
                             </div>
                         </div>
@@ -452,7 +472,7 @@ ${[...Array(12)].map((_, i) => {
                 });
             </script>
 
-    
+
     </section>
     <!-- Career Section End -->
 

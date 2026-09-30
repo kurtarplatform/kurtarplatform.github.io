@@ -7,7 +7,7 @@
   "des4": "Deprem olduğunuz yere ulaşmadan önce uyarı sağlar.",
   "kurtarekibi": "Kurtar EKİBİ",
   "projectteam": "Proje Ekibi",
-  "mainteam": "Proje Yürütücüleri",
+  "mainteam": "Main Team",
   "interns": "Bursiyerler",
   "advisors": "Danışmanlar / Akademik Danışma Kurulu",
   "meettheteam": "Ekibimizle Tanışın",
@@ -31,9 +31,11 @@
   "career": "Kariyer",
   "location": "Lokasyon",
   "ourwork": "Çalışmalarımız",
+  "newsfromus": "Bizden Haberler",
 
   "pagetitle_main": "Ana Sayfa",
   "pagetitle_about": "Hakkımızda",
+  "pagetitle_newsfromus": "Bizden Haberler",
   "pagetitle_port": "Portföy",
   "pagetitle_sss": "Sıkça Sorulan Sorular",
   "pagetitle_career": "Kariyer",
@@ -76,6 +78,11 @@
   "main_info35": "Proje Bilgisi",
   "main_info36": "KURTAR projesi, TÜBİTAK 1001 kapsamında desteklenmektedir. Proje detayları için aşağıdaki bağlantıya tıklayabilirsiniz.",
   "main_info37": "Gazi Üniversitesi Haber Duyurusu",
+
+  "newsfromus_info1": "AFAD Başkanı'ndan KURTAR Platformu ve Afet İletişimi Vurgusu",
+  "newsfromus_info2": "AFAD Başkanı Sn. Ali Hamza Pehlivan, 6 Şubat depremlerinin yıl dönümünde Anadolu Ajansı’na yaptığı açıklamalarda, afet yönetiminde teknolojik altyapının ve arama kurtarma kapasitesinin güçlendirilmesine yönelik yürütülen çalışmalara değindi. AFAD’ın teknolojik kapasitesinin geliştirilmesi kapsamında mobil haberleşme altyapısının da güçlendirildiğini belirten Sn. Pehlivan, TÜBİTAK ile yürütülen KURTAR sistemine ilişkin olarak, internet bağlantısının devre dışı kaldığı durumlarda dahi Bluetooth ve çevrim dışı özellikler üzerinden personel arasında iletişimin sağlanabildiğini ifade etti. KURTAR Platformu, afet ve acil durumlarda haberleşme altyapısının kesintiye uğrayabileceği koşullarda ekipler arasındaki iletişimin sürdürülebilirliğini desteklemeye yönelik çalışmalarını sürdürmektedir.",
+  "news.source.aa": "Anadolu Ajansı",
+    "news.readFull": "Haberin tamamını oku ↗",
   
   "career_info1": "Ekibimize Katılın!",
   "career_info2": "Eğer yeteneklerinizle fark yaratmak ve dinamik ekibimizin bir parçası olmak istiyorsanız, lütfen CV’nizi ve kendinizi tanıtan kısa bir yazıyı kurtar1001@gmail.com adresine gönderin. Başvurular titizlikle incelenecek ve sizinle en kısa sürede iletişime geçilecektir.",
